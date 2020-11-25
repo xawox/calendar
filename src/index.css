@@ -12,6 +12,7 @@ body {
     clear: both;
     content: "";
     display: table;
+    align-content: center
   }
   
   .status {
@@ -34,7 +35,7 @@ body {
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 50px;
+    width: 14.3%;
     color: whitesmoke
   }
   

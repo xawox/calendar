@@ -28,7 +28,7 @@ class Square extends React.Component {
             var date = today.getDate();
             if(date >= this.props.value) {
                 this.setState({value: 'X'})
-                return <Gift value={date}/>
+                return <Gift value={1}/>
             }
             else{
                 alert("You can't access yet!")
@@ -40,14 +40,28 @@ class Square extends React.Component {
       );
     }
   }
-  
   class Gift extends React.Component {
-
+    render() {
+        return (
+            /*{
+                if(this.props.vale == "1") {
+                    alert("yo can do that")
+                }
+                else {
+                    <img src={regalos} alt="Gifts"/>
+                }
+            };*/
+            <img src={regalos} alt="Gifts"/>
+        )
+    }
   }
 
   class Board extends React.Component {
     renderSquare(i) {
       return <Square value={i}/>;
+    }
+    renderGift(i) {
+      return <Gift value={i}/>;
     }
   
     render() {
@@ -94,7 +108,7 @@ class Square extends React.Component {
             {this.renderSquare(27)}
           </div>
           <div className="gift">
-              <img src={regalos} alt="House"/>
+            {this.renderGift()}
           </div>
         </div>
       );

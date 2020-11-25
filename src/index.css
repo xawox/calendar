@@ -54,4 +54,16 @@ body {
   .game-info {
     margin-left: 20px;
   }
+
+  .gift {
+    background: white;
+    float: left;
+    height: max-content;
+    margin-right: -1px;
+    margin-top: 5px;
+    padding: 5;
+    text-align: center;
+    width: max-content;
+    color: whitesmoke
+  }
   

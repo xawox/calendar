@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import regalos from './images/regalos.jpg';
 
 class Square extends React.Component {
     constructor(props) {
@@ -27,6 +28,7 @@ class Square extends React.Component {
             var date = today.getDate();
             if(date >= this.props.value) {
                 this.setState({value: 'X'})
+                return <Gift value={date}/>
             }
             else{
                 alert("You can't access yet!")
@@ -39,6 +41,10 @@ class Square extends React.Component {
     }
   }
   
+  class Gift extends React.Component {
+
+  }
+
   class Board extends React.Component {
     renderSquare(i) {
       return <Square value={i}/>;
@@ -86,6 +92,9 @@ class Square extends React.Component {
             {this.renderSquare()}
             {this.renderSquare()}
             {this.renderSquare(27)}
+          </div>
+          <div className="gift">
+              <img src={regalos} alt="House"/>
           </div>
         </div>
       );

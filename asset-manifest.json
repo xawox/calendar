@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/xawox/calendar.git/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/xawox/calendar.git/static/js/main.bc8dc805.chunk.js",
+    "main.js.map": "/xawox/calendar.git/static/js/main.bc8dc805.chunk.js.map",
+    "runtime-main.js": "/xawox/calendar.git/static/js/runtime-main.94860cad.js",
+    "runtime-main.js.map": "/xawox/calendar.git/static/js/runtime-main.94860cad.js.map",
+    "static/js/2.1175e3d6.chunk.js": "/xawox/calendar.git/static/js/2.1175e3d6.chunk.js",
+    "static/js/2.1175e3d6.chunk.js.map": "/xawox/calendar.git/static/js/2.1175e3d6.chunk.js.map",
+    "static/js/3.66a269b3.chunk.js": "/xawox/calendar.git/static/js/3.66a269b3.chunk.js",
+    "static/js/3.66a269b3.chunk.js.map": "/xawox/calendar.git/static/js/3.66a269b3.chunk.js.map",
+    "index.html": "/xawox/calendar.git/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/xawox/calendar.git/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.1175e3d6.chunk.js.LICENSE.txt": "/xawox/calendar.git/static/js/2.1175e3d6.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/xawox/calendar.git/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94860cad.js",
+    "static/js/2.1175e3d6.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.bc8dc805.chunk.js"
+  ]
+}

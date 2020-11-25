@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/xawox/calendar.git/static/css/main.27152b47.chunk.css",
-    "main.js": "/xawox/calendar.git/static/js/main.ea85b602.chunk.js",
-    "main.js.map": "/xawox/calendar.git/static/js/main.ea85b602.chunk.js.map",
+    "main.css": "/xawox/calendar.git/static/css/main.6166ff48.chunk.css",
+    "main.js": "/xawox/calendar.git/static/js/main.4b88976a.chunk.js",
+    "main.js.map": "/xawox/calendar.git/static/js/main.4b88976a.chunk.js.map",
     "runtime-main.js": "/xawox/calendar.git/static/js/runtime-main.45e94ebf.js",
     "runtime-main.js.map": "/xawox/calendar.git/static/js/runtime-main.45e94ebf.js.map",
-    "static/js/2.ae6708a7.chunk.js": "/xawox/calendar.git/static/js/2.ae6708a7.chunk.js",
-    "static/js/2.ae6708a7.chunk.js.map": "/xawox/calendar.git/static/js/2.ae6708a7.chunk.js.map",
+    "static/js/2.32e2fcfd.chunk.js": "/xawox/calendar.git/static/js/2.32e2fcfd.chunk.js",
+    "static/js/2.32e2fcfd.chunk.js.map": "/xawox/calendar.git/static/js/2.32e2fcfd.chunk.js.map",
     "index.html": "/xawox/calendar.git/index.html",
-    "static/css/main.27152b47.chunk.css.map": "/xawox/calendar.git/static/css/main.27152b47.chunk.css.map",
-    "static/js/2.ae6708a7.chunk.js.LICENSE.txt": "/xawox/calendar.git/static/js/2.ae6708a7.chunk.js.LICENSE.txt"
+    "static/css/main.6166ff48.chunk.css.map": "/xawox/calendar.git/static/css/main.6166ff48.chunk.css.map",
+    "static/js/2.32e2fcfd.chunk.js.LICENSE.txt": "/xawox/calendar.git/static/js/2.32e2fcfd.chunk.js.LICENSE.txt",
+    "static/media/regalos.4a6c6d67.jpg": "/xawox/calendar.git/static/media/regalos.4a6c6d67.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.45e94ebf.js",
-    "static/js/2.ae6708a7.chunk.js",
-    "static/css/main.27152b47.chunk.css",
-    "static/js/main.ea85b602.chunk.js"
+    "static/js/2.32e2fcfd.chunk.js",
+    "static/css/main.6166ff48.chunk.css",
+    "static/js/main.4b88976a.chunk.js"
   ]
 }

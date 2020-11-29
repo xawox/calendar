@@ -1,45 +1,13 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 15px;
-    background-color: red
   }
   
   ol, ul {
     padding-left: 30px;
   }
   
-  .board-row:after {
-    clear: both;
-    content: "";
-    display: table;
-    align-content: center
-  }
-  
-  .status {
-    margin-bottom: 10px;
-    text-align: center;
-    text-shadow: white;
-    color: white;
-    background-color: salmon;
-  }
-  
-  .square {
-    background: rgb(253, 3, 3);
-    border: 1px solid rgb(238, 255, 3);
-    float: left;
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 80px;
-    height: 80px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 14.3%;
-    color: whitesmoke
-  }
-  
-  .square:focus {
+   .square:focus {
     outline: none;
   }
   
@@ -50,28 +18,14 @@ body {
   .game {
     display: flex;
     flex-direction: row;
+    margin: auto;
+    align-content: center;
   }
   
   .game-info {
     margin-left: 20px;
   }
 
-  .gift {
-    background: white;
-    float: left;
-    margin-right: -1px;
-    margin-top: 5px;
-    padding: 5;
-    text-align: center;
-    height: 200px;
-    width: 310px;
-    color: whitesmoke
-  }
-
-  .photo {
-    height: 200px;
-    width: 380px;
-  }
   .Fullboard {
     height: 200px;
     width: 380px;
@@ -89,4 +43,40 @@ body {
   width: 13.6%;
   color: #666;
   text-align: center;
+}
+
+.square {
+  background: white;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 80px;
+  height: 81px;
+  text-align: center;
+  width: 13.6%;
+  border: black;
+  padding: 10px 0;
+}
+
+.square_active {
+  padding: 5px;
+  background: #bc1a1a;
+  color: white !important
+}
+
+.gift {
+  background: white;
+  float: left;
+  margin-right: -1px;
+  margin-top: 5px;
+  padding: 5;
+  text-align: center;
+  height: 200px;
+  width: 310px;
+  color: whitesmoke
+}
+
+.photo {
+  height: 200px;
+  width: 380px;
 }

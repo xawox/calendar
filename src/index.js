@@ -8,8 +8,10 @@ class Square extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: null,
+            background: '',
+            value: null     
         };
+        this.changeColor = this.changeColor.bind(this);
     }
     changeImage(i){
       var edit_gift = document.getElementById("giftImage");
@@ -116,23 +118,30 @@ class Square extends React.Component {
           break;
       }
     }
+    changeColor = () => {
+      this.setState({
+        background: ' #bc1a1a'
+      });
+    }
     render() {
-        var valueToPrint = null;
-        if (this.state.value == null) {
-            valueToPrint = this.props.value;
-        }
-        else {
-            valueToPrint =  this.state.value;
-        }
+      var valueToPrint = null;
+      if (this.state.value == null) {
+          valueToPrint = this.props.value;
+      }
+      else {
+          valueToPrint =  this.state.value;
+      }
 
       return (
         <button
+        style={{backgroundColor:this.state.background}}
         className="square"
         onClick = {() => {
             var today = new Date();
             var date = today.getDate();
             if(date >= this.props.value) {
                 //this.setState({value: 'X'})
+                this.changeColor();
                 this.changeImage(this.props.value)
             }
             else{
@@ -145,11 +154,12 @@ class Square extends React.Component {
       );
     }
   }
+
   class Gift extends React.Component {
     render(){
       //var imageToPrint = this.props.value;
       return (
-        <div className="Fullboard">
+        <div className="photo">
           {<img src={image2} alt="Gifts" className="photo" id="giftImage" style={{alignContent : "center"}}/>}
           {<p style={{color : "black"}} id="giftText">
               Welcome to your calendar!
@@ -169,59 +179,56 @@ class Square extends React.Component {
     }
   
     render() {
-      const status = 'El mejor calendario de adviento!';
-  
       return (
         <div className="Fullboard">
-          <div className="status">{status}</div>
-            <div className="weekdays">
-              <li>Mo</li>
-              <li>Tu</li>
-              <li>We</li>
-              <li>Th</li>
-              <li>Fr</li>
-              <li>Sa</li>
-              <li>Su</li>
-            </div>
-            <div className="board-row">
-              {this.renderSquare()}          
-              {this.renderSquare(1)}
-              {this.renderSquare(2)}
-              {this.renderSquare(3)}
-              {this.renderSquare(4)}
-              {this.renderSquare(5)}
-              {this.renderSquare(6)}
-            </div>
-            <div className="board-row">
-              {this.renderSquare(7)}
-              {this.renderSquare(8)}
-              {this.renderSquare(9)}
-              {this.renderSquare(10)}
-              {this.renderSquare(11)}
-              {this.renderSquare(12)}
-              {this.renderSquare(13)}
-            </div>
-            <div className="board-row">
-              {this.renderSquare(14)}
-              {this.renderSquare(15)}
-              {this.renderSquare(16)}
-              {this.renderSquare(17)}
-              {this.renderSquare(18)}
-              {this.renderSquare(19)}
-              {this.renderSquare(20)}
-            </div>
-            <div className="board-row">
-              {this.renderSquare(21)}
-              {this.renderSquare(22)}
-              {this.renderSquare(23)}
-              {this.renderSquare(24)}
-              {this.renderSquare()}
-              {this.renderSquare()}
-              {this.renderSquare()}
-            </div>
-            <div className="gift">
-              {this.renderGift(0)}
-            </div>
+          <div className="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </div>
+          <div className="board-row">
+            {this.renderSquare()}          
+            {this.renderSquare(1)}
+            {this.renderSquare(2)}
+            {this.renderSquare(3)}
+            {this.renderSquare(4)}
+            {this.renderSquare(5)}
+            {this.renderSquare(6)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(7)}
+            {this.renderSquare(8)}
+            {this.renderSquare(9)}
+            {this.renderSquare(10)}
+            {this.renderSquare(11)}
+            {this.renderSquare(12)}
+            {this.renderSquare(13)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(14)}
+            {this.renderSquare(15)}
+            {this.renderSquare(16)}
+            {this.renderSquare(17)}
+            {this.renderSquare(18)}
+            {this.renderSquare(19)}
+            {this.renderSquare(20)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(21)}
+            {this.renderSquare(22)}
+            {this.renderSquare(23)}
+            {this.renderSquare(24)}
+            {this.renderSquare()}
+            {this.renderSquare()}
+            {this.renderSquare()}
+          </div>
+          <div className="gift">
+            {this.renderGift(0)}
+          </div>
         </div>
       );
     }
@@ -229,14 +236,12 @@ class Square extends React.Component {
   
   class Game extends React.Component {
     render() {
-      var user = prompt("¿Puede indicar su nombre?");
-      var pass = prompt("¿Puede indicar su nombre?");
+      var user = "laura";//prompt("¿Puede indicar su nombre?");
+      var pass = "xavi";//prompt("¿Puede indicar su nombre?");
       if ((user === "Laura" && pass === "Xavi") || (user === "laura" && pass === "xavi") ) {
         return (        
             <div className="game">
-              <div className="game-board">
-                <Board />
-              </div>
+              <Board />
             </div>
         );
       }

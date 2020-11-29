@@ -236,8 +236,8 @@ class Square extends React.Component {
   
   class Game extends React.Component {
     render() {
-      var user = "laura";//prompt("¿Puede indicar su nombre?");
-      var pass = "xavi";//prompt("¿Puede indicar su nombre?");
+      var user = prompt("¿Puede indicar su amiga preferida?");
+      var pass = prompt("¿Puede indicar su amigo mas fan de starwars?");
       if ((user === "Laura" && pass === "Xavi") || (user === "laura" && pass === "xavi") ) {
         return (        
             <div className="game">

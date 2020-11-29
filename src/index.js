@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import regalos from './images/regalos.jpg';
+import image1 from './images/1.jpg';
+import image2 from './images/2.jpg';
 
 class Square extends React.Component {
     constructor(props) {
@@ -10,7 +11,111 @@ class Square extends React.Component {
             value: null,
         };
     }
-
+    changeImage(i){
+      var edit_gift = document.getElementById("giftImage");
+      var edit_giftText = document.getElementById("giftText");
+      switch (this.props.value){
+        case 1:
+          edit_gift.src = image1;
+          edit_giftText.textContent = "";
+          break;
+        case 2:
+          edit_gift.src = image2;
+          edit_giftText.textContent = "";
+          break;
+        case 3:
+          edit_gift.src = image1; 
+          edit_giftText.textContent = "";
+          break;
+        case 4:
+          edit_gift.src = image1;
+          edit_giftText.textContent = "";
+          break;
+        case 5:
+          edit_gift.src = image1;
+          edit_giftText.textContent = "";
+          break;
+        case 6:
+          edit_gift.src = image1;
+          edit_giftText.textContent = "";
+          break;
+        case 7:
+          edit_gift.src = image1;
+          edit_giftText.textContent = "";
+          break;
+        case 8:
+          edit_gift.src = image1;
+          edit_giftText.textContent = "";
+          break;
+        case 9:
+          edit_gift.src = image1;
+          edit_giftText.textContent = "";
+          break;
+        case 10:
+          edit_gift.src = image1;
+          edit_giftText.textContent = "";
+          break;
+        case 11:
+          edit_gift.src = image1;  
+          edit_giftText.textContent = "";
+          break;
+        case 12:
+          edit_gift.src = image1;   
+          edit_giftText.textContent = "";
+          break;
+        case 13:
+          edit_gift.src = image1;   
+          edit_giftText.textContent = "";
+          break;
+        case 14:
+          edit_gift.src = image1;  
+          edit_giftText.textContent = "";
+          break;
+        case 15:
+          edit_gift.src = image1;   
+          edit_giftText.textContent = "";
+          break;
+        case 16:
+          edit_gift.src = image1;  
+          edit_giftText.textContent = "";
+          break;
+        case 17:
+          edit_gift.src = image1;   
+          edit_giftText.textContent = "";
+          break;
+        case 18:
+          edit_gift.src = image1;  
+          edit_giftText.textContent = "";
+          break;
+        case 19:
+          edit_gift.src = image1;   
+          edit_giftText.textContent = "";
+          break;
+        case 20:
+          edit_gift.src = image1;   
+          edit_giftText.textContent = "";
+          break;
+        case 21:
+          edit_gift.src = image1;  
+          edit_giftText.textContent = "";
+          break;
+        case 22:
+          edit_gift.src = image1;  
+          edit_giftText.textContent = "";
+          break;
+        case 23:
+          edit_gift.src = image1;  
+          edit_giftText.textContent = "";
+          break;
+        case 24:
+          edit_gift.src = image1;  
+          edit_giftText.textContent = "";
+          break;
+        default:
+          //edit_gift.src = image2;          edit_giftText.textContent = "";
+          break;
+      }
+    }
     render() {
         var valueToPrint = null;
         if (this.state.value == null) {
@@ -27,8 +132,9 @@ class Square extends React.Component {
             var today = new Date();
             var date = today.getDate();
             if(date >= this.props.value) {
-                this.setState({value: 'X'})
-                return <Gift value={1}/>
+                //this.setState({value: 'X'})
+                this.changeImage(this.props.value)
+                return <Gift value={this.props.value}/>
             }
             else{
                 alert("You can't access yet!")
@@ -41,24 +147,32 @@ class Square extends React.Component {
     }
   }
   class Gift extends React.Component {
-    render() {
-        return (
-            /*{
-                if(this.props.vale == "1") {
-                    alert("yo can do that")
-                }
-                else {
-                    <img src={regalos} alt="Gifts"/>
-                }
-            };*/
-            <img src={regalos} alt="Gifts"/>
-        )
+    render(i){
+      //var imageToPrint = this.props.value;
+      return (
+        <div>
+          <div>
+            {<img src={image1} alt="Gifts" id="giftImage"/>}
+          </div>
+          <div>
+            {
+              <p style={{color : "black", fontSize : "500%"}} id="giftText">
+                Hello!
+              </p>
+            }
+          </div>
+        </div>
+
+
+
+      )
     }
   }
 
   class Board extends React.Component {
     renderSquare(i) {
       return <Square value={i}/>;
+      
     }
     renderGift(i) {
       return <Gift value={i}/>;
@@ -105,10 +219,10 @@ class Square extends React.Component {
             {this.renderSquare(24)}
             {this.renderSquare()}
             {this.renderSquare()}
-            {this.renderSquare(27)}
+            {this.renderSquare(32)}
           </div>
           <div className="gift">
-            {this.renderGift()}
+            {this.renderGift(0)}
           </div>
         </div>
       );

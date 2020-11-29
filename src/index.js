@@ -152,7 +152,7 @@ class Square extends React.Component {
       return (
         <div>
           <div>
-            {<img src={image1} alt="Gifts" id="giftImage"/>}
+            {<img src={image1} alt="Gifts" className="photo" id="giftImage"/>}
           </div>
           <div>
             {
@@ -231,17 +231,27 @@ class Square extends React.Component {
   
   class Game extends React.Component {
     render() {
-      return (
-        <div className="game">
-          <div className="game-board">
-            <Board />
-          </div>
-          <div className="game-info">
-            <div>{/* status */}</div>
-            <ol>{/* TODO */}</ol>
-          </div>
-        </div>
-      );
+      var user = prompt("¿Puede indicar su nombre?");
+      var pass = prompt("¿Puede indicar su nombre?");
+      if ((user === "xavi" && pass === "laura") || (user === "laura" && pass === "xavi") ) {
+        return (        
+            <div className="game">
+              <div className="game-board">
+                <Board />
+              </div>
+              <div className="game-info">
+                <div>{/* status */}</div>
+                <ol>{/* TODO */}</ol>
+              </div>
+            </div>
+        );
+      }
+      else {
+        alert("wrong user and password")
+        return(
+          <h1>Wrong ID refresh the web to try again</h1>
+        );
+      }
     }
   }
   

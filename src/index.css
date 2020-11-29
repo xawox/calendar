@@ -67,4 +67,9 @@ body {
     width: max-content;
     color: whitesmoke
   }
+
+  .photo {
+    height: 200px;
+    width: 310px;
+  }
   

@@ -152,12 +152,12 @@ class Square extends React.Component {
       return (
         <div>
           <div>
-            {<img src={image1} alt="Gifts" className="photo" id="giftImage"/>}
+            {<img src={image2} alt="Gifts" className="photo" id="giftImage"/>}
           </div>
           <div>
             {
               <p style={{color : "black", fontSize : "500%"}} id="giftText">
-                Hello!
+                Welcome to your calendar!
               </p>
             }
           </div>
@@ -233,7 +233,7 @@ class Square extends React.Component {
     render() {
       var user = prompt("¿Puede indicar su nombre?");
       var pass = prompt("¿Puede indicar su nombre?");
-      if ((user === "xavi" && pass === "laura") || (user === "laura" && pass === "xavi") ) {
+      if ((user === "Laura" && pass === "Xavi") || (user === "laura" && pass === "xavi") ) {
         return (        
             <div className="game">
               <div className="game-board">

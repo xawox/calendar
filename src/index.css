@@ -71,12 +71,12 @@ body {
   margin-top: 5px;
   padding: 5;
   text-align: center;
-  height: 200px;
-  width: 310px;
+  height: 400px;
+  width: 400px;
   color: whitesmoke
 }
 
 .photo {
-  height: 200px;
-  width: 380px;
+  height: 100%;
+  width: 100%;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import ReactPlayer from 'react-player'
 import image1 from './images/1.jpg';
 import image2 from './images/2.jpg';
 
@@ -190,6 +191,14 @@ class Square extends React.Component {
             Welcome to your calendar!
           </p>}
           {<img src={image2} alt="Gifts" className="photo" id="giftImage" style={{alignContent : "center"}}/>}
+         { <ReactPlayer
+              id = 'youTubePlayer'
+              url='https://youtu.be/aAkMkVFwAoo'
+              className='react-player'
+              playing
+              width='100%'
+              height='100%'
+            />}
         </div>
      )
     }
@@ -207,6 +216,8 @@ class Square extends React.Component {
     render() {
       return (
         <div className="Fullboard">
+          <h1>Bon Nadal!</h1>
+          <h2>Este es vuestro calendario de adviento de este año! Muy importante darle al play del video!</h2>
           <div className="weekdays">
             <li>Mo</li>
             <li>Tu</li>
